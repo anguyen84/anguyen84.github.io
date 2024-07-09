@@ -384,7 +384,6 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
-    @media only screen and (max-width: 600px){
     #header {
         background-image: url(images/background.gif);
         background-position: center bottom;
@@ -491,91 +490,6 @@ nav .fas{
     background-color: transparent; /* Ensure background is transparent */
     padding: 0 5px; /* Optional: Add padding for better spacing */
     display: inline-block; /* Ensure it wraps around the text */
-}
-/* Container for skills in a flexbox layout */
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0; /* Adding padding for better spacing */
-}
-
-/* Individual skill icon with text */
-.skill-icon {
-    position: relative;
-    color: #fff;
-    width: 100px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #fff; /* White border */
-    border-radius: 10px;
-    overflow: hidden; /* Prevents content from overflowing */
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    cursor: pointer; /* Add pointer cursor */
-}
-
-/* Hover effect for skill icon */
-.skill-icon:hover {
-    transform: scale(1.1);
-    border-color: red; /* Change border color to red on hover */
-}
-
-/* Skill level display */
-.skill-level {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 10px; /* Adjusted font size */
-    display: none; /* Initially hidden */
-}
-
-.skill-icon span {
-    color: #fff; /* White color */
-}
-
-/* Show skill level on hover */
-.skill-icon:hover .skill-level {
-    display: block;
-    background-color: red; /* Change background color to red on hover */
-}
-
-/* Adjust the icon size */
-.skill-icon img {
-    max-width: 100%; /* Ensure image does not exceed container width */
-    height: auto;
-    margin-bottom: 5px; /* Space between icon and text */
-}
-
-/* Optional: Style for the skill name text */
-.skill-name {
-    margin-top: 10px;
-    color: #fff;
-    font-size: 14px;
-}
-
-/* Subtitle style adjustment */
-.sub-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-/* Tab contents display */
-.tab-contents {
-    display: none;
-}
-
-/* Active tab display */
-.active-tab {
-    display: block;
 }
 
 /* Education section */
