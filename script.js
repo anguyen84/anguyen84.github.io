@@ -74,3 +74,10 @@ function filterSkills(category) {
         }
     });
 }
+
+// Detect iOS and apply scroll background-attachment
+if (/iP(hone|od|ad)/.test(navigator.userAgent)) {
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('#header').style.backgroundAttachment = 'scroll';
+    });
+}
