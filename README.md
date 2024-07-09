@@ -1,2 +1,2 @@
 # anguyen84.github.io
-My Personal Website
+Andrew's Personal Website made with HTML, CSS, and JS :)
