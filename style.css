@@ -479,6 +479,38 @@ nav .fas{
     visibility: hidden;
 }
 
+@media (max-width: 768px) {
+    .sidebar {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+    }
+
+    #sidemenu {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    #sidemenu li {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove left margin */
+        padding-top: 120px; /* Adjust to make space for fixed sidebar */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 10px; /* Increase padding */
+    }
+
+    #sidemenu li a {
+        padding: 8px 10px; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
 /* Typing animation */
 @keyframes typing {
     0% {
