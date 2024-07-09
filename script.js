@@ -81,3 +81,62 @@ if (/iP(hone|od|ad)/.test(navigator.userAgent)) {
         document.querySelector('#header').style.backgroundAttachment = 'scroll';
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuItems = mobileMenu.querySelectorAll('a');
+
+    // Function to open the mobile menu
+    function openMenu() {
+        mobileMenu.classList.add('visible');
+        menuButton.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    // Function to close the mobile menu
+    function closeMenu() {
+        mobileMenu.classList.remove('visible');
+        menuButton.classList.remove('active');
+        document.body.style.overflow = ''; // Enable scrolling
+    }
+
+    // Event listener for the menu button click
+    menuButton.addEventListener('click', function() {
+        if (mobileMenu.classList.contains('visible')) {
+            closeMenu(); // Close menu if already open
+        } else {
+            openMenu(); // Open menu if closed
+        }
+    });
+
+    // Event listener for menu item clicks to close menu and scroll to section
+    menuItems.forEach(function(menuItem) {
+        menuItem.addEventListener('click', function(event) {
+            // Close menu
+            closeMenu();
+
+            // Smooth scroll to section
+            const targetId = menuItem.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                event.preventDefault(); // Prevent default anchor behavior
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Close the menu when the page loads on mobile devices
+    function closeMenuOnLoad() {
+        if (window.innerWidth <= 768) {
+            closeMenu();
+        }
+    }
+
+    // Check on initial load and resize
+    closeMenuOnLoad();
+    window.addEventListener('resize', closeMenuOnLoad);
+});
+
