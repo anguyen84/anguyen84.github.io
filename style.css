@@ -225,14 +225,13 @@ body {
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    justify-items: center;
-    align-items: center;
+    justify-content: center;
     padding: 20px;
     max-width: 800px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Centers the grid */
+    margin: 0 auto; /* Centers the grid within its parent container */
 }
 
 .skill-box {
@@ -243,7 +242,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #fbf9f9ee;
+    border: 2px inset #fbf9f9ee;
     border-radius: 10px;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
