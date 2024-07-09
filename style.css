@@ -479,6 +479,7 @@ nav .fas{
     visibility: hidden;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
     .sidebar {
         flex-direction: column; /* Stack items vertically */
@@ -502,12 +503,17 @@ nav .fas{
 
 @media (max-width: 480px) {
     .sidebar {
-        padding: 10px; /* Increase padding */
+        width: 100%; /* Adjust sidebar width */
+        padding: 5px; /* Increase padding */
+    }
+
+    .logo {
+        width: 30px; /* Adjust logo size */
     }
 
     #sidemenu li a {
-        padding: 8px 10px; /* Adjust padding */
-        font-size: 14px; /* Adjust font size */
+        padding: 5px 6px; /* Adjust padding */
+        font-size: 12px; /* Adjust font size */
     }
 }
 
