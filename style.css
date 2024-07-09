@@ -222,6 +222,7 @@ body {
 #skills {
     padding: 100px; /* Adjust the padding value as needed */
 }
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -231,7 +232,10 @@ body {
     padding: 20px;
     max-width: 800px; /* Adjust max-width as needed */
     margin: 0 auto; /* Centers the grid */
+    justify-content: center; /* Center content horizontally */
+    align-content: center; /* Center content vertically */
 }
+
 .skill-box {
     position: relative;
     width: 100px;
@@ -244,28 +248,34 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
+
 .skill-box i {
     font-size: 50px;
 }
+
 .skill-box:hover {
     transform: scale(1.1);
     border-color: red; /* Change border color to red on hover */
 }
+
 .skill-name {
     margin-top: 10px;
     color: #fff;
     font-size: 14px;
 }
+
 .sub-title {
     text-align: center;
     margin-bottom: 20px;
     color: #fff;
 }
+
 .buttons-section {
     display: flex;
     justify-content: center;
     margin-top: 20px; /* Adjust margin as needed */
 }
+
 .button {
     display: inline-block;
     margin: 10px; /* Adjust margin as needed */
@@ -286,9 +296,11 @@ body {
 .filtered-out {
     opacity: 0.3; /* Gray out filtered out skill boxes */
 }
+
 .highlight {
     border-color: #ff004f; /* Highlight selected category */
 }
+
 /* -------portfolio----------- */
 #portfolio{
     padding: 50px 0;
@@ -437,6 +449,10 @@ nav .fas{
 
     .about-col-2 {
         font-size: 14px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for mobile devices */
     }
 
     .tab-links {
