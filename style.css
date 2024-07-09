@@ -33,11 +33,58 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.sidebar {
+    position: fixed; /* Fixed positioning to stick sidebar */
+    background-image: url('images/background.gif'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    top: 0; /* Place at top of viewport */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Distribute items with space in between */
+    align-items: center; /* Center align items vertically */
+    padding: 1px; /* Padding inside sidebar */
+    box-sizing: border-box; /* Include padding in width/height */
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+#sidemenu {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: row; /* Arrange items horizontally */
+}
+
+#sidemenu li {
+    margin-right: 10px; /* Adjust right margin between items */
+}
+
 .logo {
     width: 50px; /* Adjust size as needed */
     height: auto;
-    filter: brightness(0) invert(1); /* This will make black SVG white */
+    filter: brightness(0) invert(1); /* Make black SVG white */
 }
+
+#sidemenu li a {
+    display: block; /* Display menu items as block for full width */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px; /* Adjust padding to make items closer */
+}
+
+#sidemenu li a:hover {
+    background: #e8a4a4; /* Transparent background */
+}
+
+/* Adjust content position to accommodate the fixed sidebar */
+.main-content {
+    margin-left: 200px; /* Adjust to match sidebar width */
+    padding-top: 60px; /* Adjust to make space for fixed sidebar */
+}
+
+
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -172,6 +219,11 @@ body {
 
 
 /* ----------------skills------------- */
+
+#skills {
+    padding: 100px; /* Adjust the padding value as needed */
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -233,7 +285,7 @@ body {
     font-size: 16px;
     color: #fff;
     border: 2px solid #0a0909; /* White outline */
-    background: #44257b; /* Transparent background */
+    background: #44257b; /* Purple background */
     cursor: pointer;
 }
 
@@ -250,7 +302,7 @@ body {
 }
 /* -------portfolio----------- */
 #portfolio{
-    padding: 50px 0;
+    padding: 85px 0;
 }
 .work-list{
     display: grid;
@@ -742,3 +794,4 @@ nav .fas{
 .education-item .school-details p:last-child {
     color: #c2c2c2; /* Grey color for the last paragraph */
 }
+
