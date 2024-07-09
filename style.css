@@ -20,6 +20,7 @@ body {
     background-image: url('images/background.gif');
     background-position: center bottom;
     background-size: cover;
+    background-attachment: fixed;
 }
 .container {
     padding: 10px 10%;
