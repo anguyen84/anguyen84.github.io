@@ -385,10 +385,12 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
-    #header{
+    #header {
         background-image: url(images/background.gif);
-        background-position: center bottom; /* This will position the bottom center of the image at the bottom of the container */
-        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center bottom;
+        background-size: cover;
+        height: 100vh; /* Ensures the container takes full height of the viewport */
+        background-attachment: fixed; /* Optional: This might help in some cases */
     }
     .header-text{
         margin-top: 100%;
