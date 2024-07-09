@@ -222,17 +222,16 @@ body {
 #skills {
     padding: 100px; /* Adjust the padding value as needed */
 }
-
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
-    justify-content: center;
+    justify-items: center;
+    align-items: center;
     padding: 20px;
     max-width: 800px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Centers the grid within its parent container */
+    margin: 0 auto; /* Centers the grid */
 }
-
 .skill-box {
     position: relative;
     width: 100px;
@@ -245,35 +244,28 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
-
 .skill-box i {
     font-size: 50px;
 }
-
 .skill-box:hover {
     transform: scale(1.1);
     border-color: red; /* Change border color to red on hover */
 }
-
 .skill-name {
     margin-top: 10px;
     color: #fff;
     font-size: 14px;
 }
-
-
 .sub-title {
     text-align: center;
     margin-bottom: 20px;
     color: #fff;
 }
-
 .buttons-section {
     display: flex;
     justify-content: center;
     margin-top: 20px; /* Adjust margin as needed */
 }
-
 .button {
     display: inline-block;
     margin: 10px; /* Adjust margin as needed */
@@ -283,7 +275,7 @@ body {
     font-size: 16px;
     color: #fff;
     border: 2px solid #0a0909; /* White outline */
-    background: #44257b; /* Purple background */
+    background: #44257b; /* Transparent background */
     cursor: pointer;
 }
 
@@ -294,13 +286,12 @@ body {
 .filtered-out {
     opacity: 0.3; /* Gray out filtered out skill boxes */
 }
-
 .highlight {
     border-color: #ff004f; /* Highlight selected category */
 }
 /* -------portfolio----------- */
 #portfolio{
-    padding: 85px 0;
+    padding: 50px 0;
 }
 .work-list{
     display: grid;
@@ -339,7 +330,6 @@ body {
     font-size: 14px;
     transition: height 0.5s;
 }
-
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
@@ -376,7 +366,6 @@ body {
 .btn:hover{
     background: #ff004f;
 }
-
 /* -----------------css for small screens--------- */
 nav .fas{
     display: none;
