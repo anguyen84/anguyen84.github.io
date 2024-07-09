@@ -384,12 +384,12 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 600px){
     #header {
         background-image: url(images/background.gif);
         background-position: center bottom;
         background-size: cover;
         height: 100vh; /* Ensures the container takes full height of the viewport */
-        background-attachment: fixed; /* Optional: This might help in some cases */
     }
     .header-text{
         margin-top: 100%;
@@ -455,6 +455,7 @@ nav .fas{
         font-size: 14px;
     }
 }
+
 #msg{
     color: #61b752;
     margin-top: -40px;
