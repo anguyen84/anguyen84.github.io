@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Devicon stylesheet for additional icons (optional if using only images) -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Include the custom styles here or in a separate CSS file -->
+    
+    <style>    
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/code-solid.svg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://github.com/anguyen84" target="_blank">GitHub Profile</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Welcome to my Portfolio</p>
+            <h1>Hi, I'm <span>Andrew</span><br></h1>
+            <p class="highlighted-text"> Computer Science student at Georgia Tech (Class of 2026) <br> with experience in web design and software development.</p>
+            <p id="role">Undergraduate Researcher and Software Engineer</p>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/mclovin copy.jpg" alt="Andrew Nguyen">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Just a student who enjoys coding in his free time </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li class="education-item">
+                            <div class="school-info">
+                                <img src="images/GT.png" alt="Georgia Tech Logo" class="school-logo">
+                                <div class="school-details">
+                                    <span>2023 - 2026</span>
+                                    <p>Georgia Institute of Technology</p>
+                                    <p> Major: Computer Science (Intelligence + Media) & Minor: Math</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents active-tab" id="experience">
+                    <ul>
+                        <li class="experience-item">
+                            <div class="experience-info">
+                                <img src="images/SkillsCentral.png" alt="SkillsCentral Logo" class="experience-logo">
+                                <div class="experience-details">
+                                    <span>2022 - 2023</span>
+                                    <p>UI/UX Designer for SkillsCentral</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------skills---------------- -->
+<div id="skills"> <!-- Update the id to "skills" -->
+    <h1 class="sub-title">My Skills</h1>
+    <div class="skills-grid">
+        <!-- Alphabetically arranged skill boxes -->
+        <div class="skill-box front-end">
+            <i class="devicon-bootstrap-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Bootstrap</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-cplusplus-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">C++</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-css3-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">CSS</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-docker-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Docker</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-github-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">GitHub</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-html5-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">HTML</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-java-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Java</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-javascript-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">JavaScript</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-mongodb-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">MongoDB</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-mysql-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">MySQL</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-nodejs-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Node JS</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-python-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Python</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-pytorch-original colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">PyTorch</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-react-original colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">React JS</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-vscode-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">VS Code</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-xcode-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Xcode</div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons-section">
+        <button class="button" onclick="filterSkills('front-end')" data-category="front-end">Frontend</button>
+        <button class="button" onclick="filterSkills('back-end')" data-category="back-end">Backend</button>
+        <button class="button" onclick="filterSkills('tools')" data-category="tools">Tools</button>
+    </div>
+</div>
+
+
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/discordimg.png">
+                <div class="layer">
+                    <h3> PDF Summarizer Discord Bot</h3>
+                    <p>Developed a Discord bot using Python and Discord.py that reads PDF files and generates concise bullet-point summaries.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>TBD</h3>
+                    <p>Come back later for future updates</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>TBD</h3>
+                    <p>Come back later for future updates</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> anguyen439@gatech.edu</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/andrew-nguyen84/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2024 Andrew Nguyen. All rights reserved.</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    <script src="script.js"></script>
+</body>
+</html>

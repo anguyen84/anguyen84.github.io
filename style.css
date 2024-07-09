@@ -1,0 +1,745 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #080808;
+    color: #fff;
+}
+
+/* Header Section */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container {
+    padding: 10px 10%;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    filter: brightness(0) invert(1); /* This will make black SVG white */
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Increased font size for larger text */
+    font-weight: bold; /* Ensuring the text is bold */
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Header Text */
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span {
+    color: #ffffff;
+}
+/* -----------about--------------- */
+body {
+    background-image: url('images/darkpurple.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Optional: Ensuring a consistent font */
+}
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+    
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+    color: #fff;
+}
+
+.highlighted-text {
+    font-size: 22px; /* Example style */
+    line-height: 1.2; /* Example style */
+    color: #ffffff; /* Example style */
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+    font-size: 30px; /* Example style */
+}
+
+.tab-links {
+    margin-right: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
+/* ----------------skills------------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Centers the grid */
+}
+
+.skill-box {
+    position: relative;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fbf9f9ee;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-box i {
+    font-size: 50px;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+    border-color: red; /* Change border color to red on hover */
+}
+
+.skill-name {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+
+.sub-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.buttons-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.button {
+    display: inline-block;
+    margin: 10px; /* Adjust margin as needed */
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border: 2px solid #0a0909; /* White outline */
+    background: #44257b; /* Transparent background */
+    cursor: pointer;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom right, #ff004f, #000000); /* Gradient red background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+.filtered-out {
+    opacity: 0.3; /* Gray out filtered out skill boxes */
+}
+
+.highlight {
+    border-color: #ff004f; /* Highlight selected category */
+}
+/* -------portfolio----------- */
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    object-fit: cover; /* Ensure the image fills the container */
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Ensure it covers the entire .work container */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+/* ---------contact-------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
+.copyright a{
+    color: #ff004f;
+    text-decoration: none;
+}
+/* -----------------css for small screens--------- */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/background.gif);
+        
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background-image: url('images/darkpurple.jpg'); /* Path to your background image */
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+.header-text #role {
+    visibility: hidden;
+}
+
+/* Typing animation */
+@keyframes typing {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Blinking animation */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#role {
+    color: #fffb00; /* color for highlight */ /* yellow fffb00 */
+    background-color: transparent; /* Ensure background is transparent */
+    padding: 0 5px; /* Optional: Add padding for better spacing */
+    display: inline-block; /* Ensure it wraps around the text */
+}
+/* Container for skills in a flexbox layout */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0; /* Adding padding for better spacing */
+}
+
+/* Individual skill icon with text */
+.skill-icon {
+    position: relative;
+    color: #fff;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff; /* White border */
+    border-radius: 10px;
+    overflow: hidden; /* Prevents content from overflowing */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer; /* Add pointer cursor */
+}
+
+/* Hover effect for skill icon */
+.skill-icon:hover {
+    transform: scale(1.1);
+    border-color: red; /* Change border color to red on hover */
+}
+
+/* Skill level display */
+.skill-level {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px; /* Adjusted font size */
+    display: none; /* Initially hidden */
+}
+
+.skill-icon span {
+    color: #fff; /* White color */
+}
+
+/* Show skill level on hover */
+.skill-icon:hover .skill-level {
+    display: block;
+    background-color: red; /* Change background color to red on hover */
+}
+
+/* Adjust the icon size */
+.skill-icon img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto;
+    margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Optional: Style for the skill name text */
+.skill-name {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Subtitle style adjustment */
+.sub-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Tab contents display */
+.tab-contents {
+    display: none;
+}
+
+/* Active tab display */
+.active-tab {
+    display: block;
+}
+
+/* Education section */
+.tab-contents#education ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-item {
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.school-info {
+    display: flex;
+    align-items: center;
+}
+
+.school-logo {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and details */
+}
+
+.school-details {
+    flex-grow: 1;
+}
+
+.school-details span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #b54769; /* Year color */
+}
+
+.school-details p {
+    margin: 0;
+    color: #fff; /* School details text color */
+}
+
+/* Experience section */
+.tab-contents#experience ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-item {
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.experience-info {
+    display: flex;
+    align-items: center;
+}
+
+.experience-logo {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and details */
+}
+
+.experience-details {
+    flex-grow: 1;
+}
+
+.experience-details span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #b54769; /* Year color */
+}
+
+.experience-details p {
+    margin: 0;
+    color: #fff; /* Experience details text color */
+}
+
+/* Hover effect for education item */
+.education-item {
+    position: relative;
+    border: 2px solid #fff; /* White border */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.education-item:hover {
+    border-color: red; /* Change border color on hover */
+    transform: scale(1.03); /* Scale up slightly on hover */
+}
+
+.education-item img {
+    display: block;
+    width: 70px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.education-item:hover img {
+    transform: scale(1); /* Scale up image on hover */
+}
+
+.education-item > div {
+    padding: 10px;
+    color: #fff;
+}
+
+.education-item > div span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Hover effect for experience item */
+.experience-item {
+    position: relative;
+    border: 2px solid #fff; /* White border */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.experience-item:hover {
+    border-color: red; /* Change border color on hover */
+    transform: scale(1.03); /* Scale up slightly on hover */
+}
+
+.experience-item img {
+    display: block;
+    width: 70px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.experience-item:hover img {
+    transform: scale(1); /* Scale up image on hover */
+}
+
+.experience-item > div {
+    padding: 10px;
+    color: #fff;
+}
+
+.experience-item > div span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.education-item .school-details p:last-child {
+    color: #c2c2c2; /* Grey color for the last paragraph */
+}
