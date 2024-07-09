@@ -117,8 +117,8 @@ nav ul li a:hover::after {
     font-size: 30px;
 }
 .header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
+    font-size: 70px;
+    margin-top: 1px;
 }
 .header-text h1 span {
     color: #ffffff;
@@ -387,7 +387,8 @@ nav .fas{
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/background.gif);
-        
+        background-position: center bottom; /* This will position the bottom center of the image at the bottom of the container */
+        background-size: cover; /* Ensures the image covers the entire background */
     }
     .header-text{
         margin-top: 100%;
@@ -400,6 +401,15 @@ nav .fas{
         display: block;
         font-size: 25px;
     }
+
+    #role {
+        color: #fffb00; /* color for highlight */ /* yellow fffb00 */
+        background-color: transparent; /* Ensure background is transparent */
+        padding: 0 5px; /* Optional: Add padding for better spacing */
+        display: inline-block; /* Ensure it wraps around the text */
+        font-size: 21px;
+    }
+
     nav ul{
         background-image: url('images/darkpurple.jpg'); /* Path to your background image */
         position: fixed;
@@ -761,6 +771,4 @@ nav .fas{
 .contact .copyright {
     font-size: 0.9em;
 }
-
-
 
