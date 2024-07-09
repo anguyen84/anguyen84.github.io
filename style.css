@@ -238,7 +238,6 @@ body {
 }
 
 .button:hover {
-    background: linear-gradient(to bottom right, #ff004f, #000000); /* Gradient red background on hover */
     color: #ffffff; /* White text on hover */
 }
 
