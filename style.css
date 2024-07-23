@@ -158,13 +158,23 @@ body {
 }
 
 .about-col-1 {
-    flex-basis: 35%;
+    width: 400px; /* Set the desired width of the square */
+    height: 400px; /* Set the desired height (same as width to make it square) */
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Needed for absolute positioning of the img */
+    border-radius: 15px; /* Apply border-radius to the container */
 }
 
 .about-col-1 img {
-    width: 100%;
-    border-radius: 15px;
+    width: 100%; /* Ensure the image covers the container */
+    height: 100%; /* Ensure the image covers the container */
+    object-fit: cover; /* Crop the image to fit the container */
+    position: absolute; /* Position the image absolutely within the container */
+    transform: translate(-50%, -50%); /* Adjust position to center the image */
+    transform: scale(1.1); /* Move the image to the right and zoom in */
+    clip-path: inset(0 round 15px); /* Ensure the image respects the border-radius */
 }
+
 
 .about-col-2 {
     flex-basis: 60%;
