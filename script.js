@@ -140,3 +140,25 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', closeMenuOnLoad);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Adjust threshold as needed
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const target = document.querySelector('.about-col-1');
+    observer.observe(target);
+});
