@@ -162,3 +162,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const target = document.querySelector('.about-col-1');
     observer.observe(target);
 });
+
