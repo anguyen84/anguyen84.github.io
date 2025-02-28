@@ -20,6 +20,7 @@
   <!--
     - google font link
   -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -426,6 +427,8 @@
 
         </section>
 
+        
+
         <section class="skill">
 
           <h3 class="h3 skills-title"></h3>
@@ -433,6 +436,70 @@
           
 
         </section>
+        
+        <h1 class="sub-title">My Skills</h1>
+    <div class="skills-grid">
+        <div class="skill-box back-end">
+            <i class="devicon-java-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Java</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-python-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Python</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-javascript-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">JavaScript</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-html5-plain colored"></i>
+            <div class="skill-details front-end">
+                <div class="skill-name">HTML</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-css3-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">CSS</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-react-original colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">React</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-pytorch-original colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">PyTorch</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-vscode-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">VS Code</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+          <i class="devicon-intellij-plain colored"></i>
+          <div class="skill-details">
+              <div class="skill-name">intellij</div>
+          </div>
+      </div>
+    </div>
+
+    <div class="buttons-section">
+        <button class="button" onclick="filterSkills('front-end')" data-category="front-end">Frontend</button>
+        <button class="button" onclick="filterSkills('back-end')" data-category="back-end">Backend</button>
+        <button class="button" onclick="filterSkills('tools')" data-category="tools">Tools</button>
+    </div>
 
       </article>
 

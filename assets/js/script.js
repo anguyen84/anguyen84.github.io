@@ -157,3 +157,67 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Filter Skills Funtion
+
+function filterSkills(category) {
+  const buttons = document.querySelectorAll('.button');
+  const skillBoxes = document.querySelectorAll('.skill-box');
+
+  buttons.forEach(button => {
+      if (button.dataset.category === category) {
+          if (button.classList.contains('highlight')) {
+              button.classList.remove('highlight');
+              skillBoxes.forEach(box => box.classList.remove('filtered-out'));
+          } else {
+              buttons.forEach(btn => btn.classList.remove('highlight'));
+              button.classList.add('highlight');
+              skillBoxes.forEach(box => {
+                  if (!box.classList.contains(category)) {
+                      box.classList.add('filtered-out');
+                  } else {
+                      box.classList.remove('filtered-out');
+                  }
+              });
+          }
+      } else {
+          button.classList.remove('highlight');
+      }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const skillBoxes = document.querySelectorAll('.skill-box');
+
+  skillBoxes.forEach(box => {
+      box.addEventListener('mousemove', handleMouseMove);
+      box.addEventListener('mouseleave', handleMouseLeave);
+  });
+
+  function handleMouseMove(event) {
+      const box = event.currentTarget;
+      const rect = box.getBoundingClientRect();
+      const x = event.clientX - rect.left; 
+      const y = event.clientY - rect.top;  
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const deltaX = x - centerX;
+      const deltaY = y - centerY;
+
+      const percentX = deltaX / centerX;
+      const percentY = deltaY / centerY;
+
+      const maxTilt = 30; 
+      const tiltX = maxTilt * percentY; 
+      const tiltY = -maxTilt * percentX;
+
+      box.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  }
+
+  function handleMouseLeave(event) {
+      const box = event.currentTarget;
+      box.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+  }
+});

@@ -1880,3 +1880,162 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* ------------ My Skills Section --------------- */
+
+#services {
+  /* Match article/sidebar styling from the rest of your site */
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  padding: 40px 20px;
+  margin-bottom: 35px; /* Spacing to match other sections */
+  margin-top: 40px;
+}
+
+.sub-title {
+  /* Use heading styles that match your site (e.g., .h2 or .article-title) */
+  text-align: left;
+  margin-bottom: 30px;
+  color: var(--white-2);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-600);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto; /* Centers the grid */
+}
+
+/* Skill Box */
+.skill-box {
+  position: relative;
+  width: 100px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Match the card-style background & border from the rest of the site */
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-1);
+
+  /* Smooth transitions */
+  transition: transform var(--transition-1), border-color var(--transition-1);
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Inner gradient layer for the skill box (similar to .content-card::before) */
+.skill-box::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.skill-box i {
+  font-size: 50px;
+  color: var(--white-2); /* Use your site’s text color variables */
+}
+
+.skill-name {
+  margin-top: 10px;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  color: var(--white-2);
+}
+
+/* Hover Effects */
+.skill-box:hover {
+  transform: scale(1.05);
+  border-color: var(--orange-yellow-crayola);
+}
+
+/* Example "Skill Level" pop-up or highlight (if applicable) */
+.skill-box:hover .skill-level {
+  display: block;
+  background-color: var(--orange-yellow-crayola);
+}
+
+/* Buttons for Filtering Skills */
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: var(--fs-6);
+  color: var(--light-gray);
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  transition: var(--transition-1);
+  z-index: 1;
+}
+
+/* Replicate the 'border-gradient' + 'jet' background layering from your site */
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+/* Button Hover Effects */
+.button:hover {
+  color: var(--orange-yellow-crayola);
+  background: var(--bg-gradient-yellow-1);
+}
+
+.button:hover::before {
+  background: var(--bg-gradient-yellow-2);
+}
+
+/* Active / highlighted filter button */
+.button.highlight {
+  color: var(--orange-yellow-crayola);
+  border-color: var(--orange-yellow-crayola);
+}
+
+/* Skills Filter Effect */
+.filtered-out {
+  opacity: 0.05;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+}
